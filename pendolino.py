@@ -226,7 +226,7 @@ def av_dist(chain, center):
     return float(dist_sum) / float(len(chain))
 
 
-def metropolis_out(chain, state, lens, iters):
+def metropolis_out(chain, state, lens, iters): # relacsation of the chromatin
     print "METROPOLIS_OUT"
     count = 0
 
@@ -306,7 +306,7 @@ def metropolis(chain, required_av_dist, delta,
     return chain, distances
 
 
-def position_chains(chain1, chain2, chain3, chain4, chain5, chain6, r):
+def position_chains(chain1, chain2, chain3, chain4, chain5, chain6, r): 
     # print find_center(chain1).astype(numpy.int)
     k = 14
     chain1 = chain1 - find_center(chain1).astype(numpy.int) + [0, 0, -k]
